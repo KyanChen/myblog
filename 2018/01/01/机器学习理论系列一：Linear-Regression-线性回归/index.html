@@ -108,23 +108,38 @@
 
 
 
-  <meta name="description" content="越努力，越幸运！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="windliang">
-<meta property="og:url" content="http://windliang.cc/index.html">
+  <meta name="description" content="Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归 Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降Model 美 [ˈmɑdl] : 模型  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 P">
+<meta name="keywords" content="线性回归,机器学习,梯度下降">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习理论系列一：Linear Regression(线性回归)">
+<meta property="og:url" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/index.html">
 <meta property="og:site_name" content="windliang">
-<meta property="og:description" content="越努力，越幸运！">
+<meta property="og:description" content="Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归 Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降Model 美 [ˈmɑdl] : 模型  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 P">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/baby.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/data.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/2.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/3.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/6.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/4.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/5.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/more.jpg">
+<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/l.jpg">
+<meta property="og:updated_time" content="2018-07-07T04:18:15.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windliang">
-<meta name="twitter:description" content="越努力，越幸运！">
+<meta name="twitter:title" content="机器学习理论系列一：Linear Regression(线性回归)">
+<meta name="twitter:description" content="Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归 Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降Model 美 [ˈmɑdl] : 模型  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 P">
+<meta name="twitter:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/"/>
+  <link rel="canonical" href="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/"/>
 
 
 
@@ -134,7 +149,7 @@
   };
 </script>
 
-  <title>windliang</title>
+  <title>机器学习理论系列一：Linear Regression(线性回归) | windliang</title>
   
 
 
@@ -181,8 +196,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -219,7 +233,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
   </li>
@@ -263,9 +277,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -297,11 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/" itemprop="url">
-                  机器学习理论系列一：Linear Regression(线性回归)
-                </a>
+          <h1 class="post-title" itemprop="name headline">机器学习理论系列一：Linear Regression(线性回归)
               
             
           </h1>
@@ -376,9 +386,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归<br> Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数<br>Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降<br>Model 美 [ˈmɑdl] : 模型</p>
 </blockquote>
 <p>本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。<br>视频及 PPT 原教程：<a href="https://pan.baidu.com/s/1geFro9H" target="_blank" rel="noopener">https://pan.baidu.com/s/1geFro9H</a> 密码：50sc<br>线性回归中<a href="&quot;https://zh.wikipedia.org/zh-hans/%E7%B7%9A%E6%80%A7%E5%9B%9E%E6%AD%B8&quot;">维基百科</a>的定义如下:</p>
@@ -409,8 +417,6 @@
 <p>不如思考下课程中的例子股票预测，无人驾驶，购物推荐，找一下影响预测的因素是什么，理一理具体的过程。</p>
 <p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/l.jpg" alt=" "></p>
 
-          
-        
       
     </div>
 
@@ -428,14 +434,24 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/线性回归/" rel="tag"># 线性回归</a>
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/梯度下降/" rel="tag"># 梯度下降</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -445,14 +461,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -473,8 +494,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,6 +566,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据收集"><span class="nav-number">1.</span> <span class="nav-text">数据收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Model"><span class="nav-number">2.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Goodness-of-Function"><span class="nav-number">3.</span> <span class="nav-text">Goodness of Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Best-Function"><span class="nav-number">4.</span> <span class="nav-text">Best  Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-amp-重新设计模型"><span class="nav-number">5.</span> <span class="nav-text">Test &amp; 重新设计模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总"><span class="nav-number">6.</span> <span class="nav-text">总</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -663,6 +709,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
