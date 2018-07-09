@@ -221,7 +221,7 @@
           
           <li class="menu-item menu-item-home menu-item-active">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
@@ -229,7 +229,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
   </li>
 
       
@@ -319,14 +319,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2018-01-01 23:18:56" itemprop="dateCreated datePublished" datetime="2018-01-01T23:18:56+08:00">2018-01-01</time>
+              <time title="Created: 2018-01-01 23:18:56" itemprop="dateCreated datePublished" datetime="2018-01-01T23:18:56+08:00">2018-01-01</time>
             
 
             
@@ -343,7 +343,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2018-07-07 12:18:15" itemprop="dateModified" datetime="2018-07-07T12:18:15+08:00">2018-07-07</time>
+                <time title="Modified: 2018-07-09 22:12:17" itemprop="dateModified" datetime="2018-07-09T22:12:17+08:00">2018-07-09</time>
               
             
           </span>
@@ -378,38 +378,16 @@
       
         
           
-            <blockquote>
-<p>Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归<br> Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数<br>Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降<br>Model 美 [ˈmɑdl] : 模型</p>
-</blockquote>
-<p>本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。<br>视频及 PPT 原教程：<a href="https://pan.baidu.com/s/1geFro9H" target="_blank" rel="noopener">https://pan.baidu.com/s/1geFro9H</a> 密码：50sc<br>线性回归中<a href="&quot;https://zh.wikipedia.org/zh-hans/%E7%B7%9A%E6%80%A7%E5%9B%9E%E6%AD%B8&quot;">维基百科</a>的定义如下:</p>
-<blockquote>
-<p>在统计学中，线性回归（Linear regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。 这种函数是一个或多个称为回归系数的模型参数的线性组合。<br><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png" alt=" "></p>
-</blockquote>
-<p>线性回归用途最多的地方就是做预测，根据已知的数据建立一个模型（也就是一个很复杂的函数），然后利用这个模型做预测。先举一个例子，即预测进化后神奇宝贝的 cp 值。</p>
-<h2 id="数据收集"><a href="#数据收集" class="headerlink" title="数据收集"></a>数据收集</h2><p>假设我们有一些神奇宝贝的数据，他们有种类 ，cp 值，hp 值，weight ，height 以及进化后的 cp 值。我们选取其中的 10 只做训练。</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/baby.jpg" alt=" "></p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/data.jpg" alt=" "></p>
-<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>下边是线性回归的最一般表示：</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg" alt=" "><br>这里的 $x_i$ 可以是 cp , weight , height 的值， 而 y 代表进化后的 cp 值，我们需要做的工作是确定 $w_i$ 和 b 的值。而 $x_i$ 的选取会直接影响到模型预测的准确性。</p>
-<p>进化后的 cp 和什么因素相关？最直接的和进化前的 cp 一定相关，所以我们先用一个最简单的模型试一下：</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/2.jpg" alt=" "><br>即 $x_i$ 只取一个 cp 值，w 和 b 的值可以有无数个，例如</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/3.jpg" alt=" "><br>那么，我们应该选哪一个的  w 和 b 的值呢？</p>
-<h2 id="Goodness-of-Function"><a href="#Goodness-of-Function" class="headerlink" title="Goodness of Function"></a>Goodness of Function</h2><p>我们定义一个函数，来评估当前的模型好不好，也就是 w 和 b 好不好。我们叫他为  Loss funcition ，他越小代表 w 和 b 越好。如果预测的完全正确，那么他将是 0 。</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/6.jpg" alt=" "><br>把 f 代入：</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/4.jpg" alt=" "><br>$b + w * x{^n_{cp}}$ 就是 f ,也就是预测的 cp 值<br>y 上边一个三角 ( y 帽）指的是进化后的 cp 值。</p>
-<h2 id="Best-Function"><a href="#Best-Function" class="headerlink" title="Best  Function"></a>Best  Function</h2><p>求 $f_1$ 的 w 和 cp 的 对应的 loss 值<br> $$ L = \sum_{i=0}^{10} ( \hat{y} - ( 10.0 + 9.0 · x{^n_{cp}} ) )^2$$<br>先把 w = 9.0 和 b = 10.0 的值带入，然后把已知的数据的 cp 值分别带入函数中，然后把预测出来的 cp 值 和原本的 cp 值 $\hat{y}$ 做个差，再平方一下（消除负数的影响），然后把每一个数据都这样做，然后加起来得到 L 。</p>
-<p>同理，求出 $f_1$，$f_2$，$f_3$ …… 的 loss 值，然后把它的分布图画出来。</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/5.jpg" alt=" "><br>每一个点都代表一个 f<br>颜色深代表 loss 值大，颜色浅代表 loss 值小<br>最小的 f 是叉号的地方，目测 w 是 2.4 ， b 是 -190。</p>
-<p>所以我们得到的模型就是<br>$$f = -190 + 2.4 · x_{cp}$$<br>这样，我们就可以愉快的预测进化后的 cp 值了。</p>
-<h2 id="Test-amp-重新设计模型"><a href="#Test-amp-重新设计模型" class="headerlink" title="Test &amp; 重新设计模型"></a>Test &amp; 重新设计模型</h2><p>咦？准确率似乎不是很高。原因很简单，我们的模型太简单了。让我们回到 Model 那个阶段，重新设计 Model 。<br><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg" alt=" "><br>之前的 Model 我们用了最简单的<br>$$ y = b + w · x_{cp}$$<br>我们不妨，再加个 $x{^2_{cp}}$ ，变成<br>$$ y = b + w_1 · x_{cp} + w_2 ·  x{^2_{cp}}$$<br>不是线性回归吗？怎么出现了 2 次项。<br>仔细观察线性回归 Model 的定义 $y = b + \sum w_ix_i$ ，我们可以把 $ x_{cp}$ 和 $ x{^2_{cp}}$ 整体都当做是 $x_i$ 项，不管平不平方，他们都可以看做常数项，而我们的自变量是 $w_i$ ，它是 1 次的，那我们就是线性的。</p>
-<p>同理，我们还可以再加入 3 次项， 4 次项，让 Model 更复杂，然后再进行 Test  查看预测的结果的 loss 值够不够小。</p>
-<p>当然，我们还可以把其他的因素加入到模型中。<br><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/more.jpg" alt=" "><br>我们可以看到，似乎 HP 的值对进化后的 CP 值是有一定影响的，HP 值越大，进化后的 CP 值也越大。<br>我们继续复杂我们的模型。<br>$$ y = b + w_1 · x_{cp} + w_2 ·  x{^2_{cp}}+ w_3·x_{hp} + w_4·x{^2_{hp}}$$<br>然后我们向上边一样穷举 b , $w_1$, $w_2$ ,  $w_3$ , $w_4$ 的值，观察哪一个 b , $w_1$, $w_2$ ,  $w_3$  ,  $w_4$ 会使得 loss 值最小。</p>
-<p>那大概是疯了，上边是两个变量能穷举，这 5 个变量或者更多这一辈子也算不完。<br>所以除了穷举的方法，还有其他的方法去求 b 和 $w_i$ 的值吗？<br>没错，就是 Gradient Descent （梯度下降），不管 w 有多少个都可以轻轻松松求出来，且听下篇文章。</p>
-<h2 id="总"><a href="#总" class="headerlink" title="总"></a>总</h2><p>其实，步骤就是对现实就行抽象，找到影响预测的因素，找到一批数据，然后设计一个模型，利用数据对模型训练（求出最佳的 b 和 $w_i$) ，然后进行测试，看结果的准确率是否能接受，然后再进行模型的修改，反反复复直到满意。</p>
-<p>不如思考下课程中的例子股票预测，无人驾驶，购物推荐，找一下影响预测的因素是什么，理一理具体的过程。</p>
-<p><img src="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/l.jpg" alt=" "></p>
-
           
+Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归 Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降Model 美 [ˈmɑd
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -490,7 +468,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -511,7 +489,7 @@
                       
                     
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">Tags</span>
+                    <span class="site-state-item-name">tags</span>
                   
                 </div>
               
@@ -564,7 +542,7 @@
 
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 
@@ -705,6 +683,43 @@
   
 
   
+  
+
+  
+  
+    
+      
+        
+      
+    
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
   
