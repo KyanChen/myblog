@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/slide.jpg">
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/slide11.jpg">
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/slide22.jpg">
-<meta property="og:updated_time" content="2018-07-16T09:27:47.421Z">
+<meta property="og:updated_time" content="2018-07-16T09:35:07.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetCode_3_Longest_Substring_Without_Repeating_Characters">
 <meta name="twitter:description" content="题目描述（中等难度） 给定一个字符串，找到没有重复字符的最长子串，返回它的长度。 解法一简单粗暴些，找一个最长子串，那么我们用两个循环穷举所有子串，然后再用一个函数判断该子串中有没有重复的字符。 123456789101112131415161718public int lengthOfLongestSubstring(String s) &amp;#123;    int n = s.length();">
@@ -351,7 +351,7 @@
                 
               
 
-              <time title="创建时间：2018-07-16 11:26:08 / 修改时间：17:27:47" itemprop="dateCreated datePublished" datetime="2018-07-16T11:26:08+08:00">2018-07-16</time>
+              <time title="创建时间：2018-07-16 11:26:08 / 修改时间：17:35:07" itemprop="dateCreated datePublished" datetime="2018-07-16T11:26:08+08:00">2018-07-16</time>
             
 
             
@@ -413,7 +413,8 @@
 <p>j 取 3，判断字符串 str[0,3) 中有没有重复的字符。</p>
 <p>j 取 4，判断字符串 str[0,4) 中有没有重复的字符。</p>
 <p>做了很多重复的工作，因为如果 str[0,3) 中没有重复的字符，我们不需要再判断整个字符串 str[0,4) 中有没有重复的字符，而只需要判断 str[3] 在不在 str[0,3) 中，不在的话，就表明 str[0,4) 中没有重复的字符。</p>
-<p>如果在的话，那么 str[0,5) ，str[0,6) ，str[0,7)  一定有重复的字符，所以此时后边的 j 也不需要继续增加了。i ++ 进入下次的循环就可以了。此外，我们的 j 也不需要取 i + 1，而只需要从当前的 j 开始就可以了。</p>
+<p>如果在的话，那么 str[0,5) ，str[0,6) ，str[0,7)  一定有重复的字符，所以此时后边的 j 也不需要继续增加了。i ++ 进入下次的循环就可以了。</p>
+<p>此外，我们的 j 也不需要取 j + 1，而只需要从当前的 j 开始就可以了。</p>
 <p>综上，其实整个关于 j 的循环我们完全可以去掉了，此时可以理解变成了一个「滑动窗口」。</p>
 <p><img src="http://pbs6qfi7i.bkt.clouddn.com/slide.jpg" alt=""></p>
 <p>整体就是橘色窗口在依次向右移动。</p>
