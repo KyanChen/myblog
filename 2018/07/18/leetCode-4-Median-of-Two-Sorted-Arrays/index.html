@@ -129,7 +129,7 @@
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/mid10.jpg">
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/mid11.jpg">
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/mid12.jpg">
-<meta property="og:updated_time" content="2018-07-23T16:40:54.724Z">
+<meta property="og:updated_time" content="2018-07-23T16:43:49.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetCode_4_Median_of_Two_Sorted_Arrays">
 <meta name="twitter:description" content="题目描述（困难难度） 已知两个有序数组，找到两个数组合并后的中位数。 解法一简单粗暴，先将两个数组合并，两个有序数组的合并也是归并排序中的一部分。然后根据奇数，还是偶数，返回中位数。 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950public double f">
@@ -378,7 +378,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-24 00:40:54" itemprop="dateModified" datetime="2018-07-24T00:40:54+08:00">2018-07-24</time>
+                <time title="修改时间：2018-07-24 00:43:49" itemprop="dateModified" datetime="2018-07-24T00:43:49+08:00">2018-07-24</time>
               
             
           </span>
@@ -455,7 +455,7 @@
 <p>但如果 B 数组此刻已经没有数字了，继续取数字B [ bStart ]，则会越界，所以判断下 bStart 是否大于数组长度了，这样 || 后边的就不会执行了，也就不会导致错误了，所以增加为 aStart  ＜  m  &amp;&amp; ( bStart &gt;= n || A [ aStart ] &lt; B [ bStart ] ) 。</p>
 <h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = A.length;</span><br><span class="line">    <span class="keyword">int</span> n = B.length;</span><br><span class="line">    <span class="keyword">int</span> len = m + n;</span><br><span class="line">    <span class="keyword">int</span> left = -<span class="number">1</span>, right = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> aStart = <span class="number">0</span>, bStart = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= len / <span class="number">2</span>; i++) &#123;</span><br><span class="line">        left = right;</span><br><span class="line">        <span class="keyword">if</span> (aStart &lt; m &amp;&amp; (bStart &gt;= n || A[aStart] &lt; B[bStart])) &#123;</span><br><span class="line">            right = A[aStart++];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = B[bStart++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ((len &amp; <span class="number">1</span>) == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> (left + right) / <span class="number">2.0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>时间复杂度：遍历 len/2 + 1 次，len = m + n ，所以时间复杂度依旧是 O（m + n）。</p>
-<p>空间复杂度：我们申请了常数个变量，也就是 m，n，len，left，right，aStart，bStart 以及 i</p>
+<p>空间复杂度：我们申请了常数个变量，也就是 m，n，len，left，right，aStart，bStart 以及 i 。</p>
 <p>总共 8 个变量，所以空间复杂度是 O（1）。</p>
 <h2 id="解法三"><a href="#解法三" class="headerlink" title="解法三"></a>解法三</h2><p>上边的两种思路，时间复杂度都达不到题目的要求 O ( log ( m + n ) )。看到 log ，很明显，我们只有用到二分的方法才能达到。我们不妨用另一种思路，题目是求中位数，其实就是求第 k 小数的一种特殊情况，而求第 k 小数有一种算法。</p>
 <p>解法二中，我们一次遍历就相当于去掉不可能是中位数的一个值，也就是一个一个排除。由于数列是有序的，其实我们完全可以一半儿一半儿的排除。假设我们要找第 k 小数，我们可以每次循环排除掉 k / 2 个数。看下边一个例子。</p>
