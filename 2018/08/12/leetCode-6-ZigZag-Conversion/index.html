@@ -108,53 +108,29 @@
 
 
 
-  <meta name="description" content="Neruron 美 [ˈnʊrɑn] : 神经元activation 美 [ˌæktɪ’veɪʃn] : 活化，激活feedforward 美 [‘fɪd’fɔwəd] : 前馈backpropagation 美 [bækprɒpə’ɡeɪʃn] : 反向传播  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 PPT 原教程：https://pan.baidu.c">
-<meta name="keywords" content="机器学习,深度学习,神经网络">
+  <meta name="description" content="题目描述（中等难度） 就是给定一个字符串，然后按写竖着的 「z」的方式排列字符，就是下边的样子。  然后按行的方式输出每个字符，第 0 行，第 1 行，第 2 行 …. 解法一按照写 Z 的过程，遍历每个字符，然后将字符存到对应的行中。用 goningDown 保存当前的遍历方向，如果遍历到两端，就改变方向。 123456789101112131415161718192021public Stri">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深度学习理论系列一">
-<meta property="og:url" content="http://windliang.cc/2018/01/21/深度学习理论系列一/index.html">
+<meta property="og:title" content="leetCode_6_ZigZag_Conversion">
+<meta property="og:url" content="http://windliang.cc/2018/08/12/leetCode-6-ZigZag-Conversion/index.html">
 <meta property="og:site_name" content="windliang">
-<meta property="og:description" content="Neruron 美 [ˈnʊrɑn] : 神经元activation 美 [ˌæktɪ’veɪʃn] : 活化，激活feedforward 美 [‘fɪd’fɔwəd] : 前馈backpropagation 美 [bækprɒpə’ɡeɪʃn] : 反向传播  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 PPT 原教程：https://pan.baidu.c">
+<meta property="og:description" content="题目描述（中等难度） 就是给定一个字符串，然后按写竖着的 「z」的方式排列字符，就是下边的样子。  然后按行的方式输出每个字符，第 0 行，第 1 行，第 2 行 …. 解法一按照写 Z 的过程，遍历每个字符，然后将字符存到对应的行中。用 goningDown 保存当前的遍历方向，如果遍历到两端，就改变方向。 123456789101112131415161718192021public Stri">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/1.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/3.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/2.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/4.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/5.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/7.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/8.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/6.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/9.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/10.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/11.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/12.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/14.png">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/13.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/14.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/15.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/16.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/17.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/18.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/19.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/20.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/21.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/23.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/24.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/25.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/26.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/27.jpg">
-<meta property="og:updated_time" content="2018-07-09T14:32:35.475Z">
+<meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/6_zig.jpg">
+<meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/6_1.jpg">
+<meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/6_3.jpg">
+<meta property="og:updated_time" content="2018-08-12T05:06:59.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深度学习理论系列一">
-<meta name="twitter:description" content="Neruron 美 [ˈnʊrɑn] : 神经元activation 美 [ˌæktɪ’veɪʃn] : 活化，激活feedforward 美 [‘fɪd’fɔwəd] : 前馈backpropagation 美 [bækprɒpə’ɡeɪʃn] : 反向传播  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 PPT 原教程：https://pan.baidu.c">
-<meta name="twitter:image" content="http://windliang.cc/2018/01/21/深度学习理论系列一/1.jpg">
+<meta name="twitter:title" content="leetCode_6_ZigZag_Conversion">
+<meta name="twitter:description" content="题目描述（中等难度） 就是给定一个字符串，然后按写竖着的 「z」的方式排列字符，就是下边的样子。  然后按行的方式输出每个字符，第 0 行，第 1 行，第 2 行 …. 解法一按照写 Z 的过程，遍历每个字符，然后将字符存到对应的行中。用 goningDown 保存当前的遍历方向，如果遍历到两端，就改变方向。 123456789101112131415161718192021public Stri">
+<meta name="twitter:image" content="http://pbs6qfi7i.bkt.clouddn.com/6_zig.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/2018/01/21/深度学习理论系列一/"/>
+  <link rel="canonical" href="http://windliang.cc/2018/08/12/leetCode-6-ZigZag-Conversion/"/>
 
 
 
@@ -164,7 +140,7 @@
   };
 </script>
 
-  <title>深度学习理论系列一 | windliang</title>
+  <title>leetCode_6_ZigZag_Conversion | windliang</title>
   
 
 
@@ -333,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2018/01/21/深度学习理论系列一/">
+    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2018/08/12/leetCode-6-ZigZag-Conversion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="windliang">
@@ -350,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">深度学习理论系列一
+          <h1 class="post-title" itemprop="name headline">leetCode_6_ZigZag_Conversion
               
             
           </h1>
@@ -375,29 +351,35 @@
                 
               
 
-              <time title="创建时间：2018-01-21 18:02:26" itemprop="dateCreated datePublished" datetime="2018-01-21T18:02:26+08:00">2018-01-21</time>
+              <time title="创建时间：2018-08-12 10:26:50 / 修改时间：13:06:59" itemprop="dateCreated datePublished" datetime="2018-08-12T10:26:50+08:00">2018-08-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-07-09 22:32:35" itemprop="dateModified" datetime="2018-07-09T22:32:35+08:00">2018-07-09</time>
               
             
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -405,7 +387,7 @@
 
           
           
-             <span id="/2018/01/21/深度学习理论系列一/" class="leancloud_visitors" data-flag-title="深度学习理论系列一">
+             <span id="/2018/08/12/leetCode-6-ZigZag-Conversion/" class="leancloud_visitors" data-flag-title="leetCode_6_ZigZag_Conversion">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -436,57 +418,30 @@
       
 
       
-        <blockquote>
-<p>Neruron 美 [ˈnʊrɑn] : 神经元<br>activation 美 [ˌæktɪ’veɪʃn] : 活化，激活<br>feedforward 美 [‘fɪd’fɔwəd] : 前馈<br>backpropagation 美 [bækprɒpə’ɡeɪʃn] : 反向传播</p>
-</blockquote>
-<p>本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。<br>视频及 PPT 原教程：<a href="https://pan.baidu.com/s/1dAFnki" target="_blank" rel="noopener">https://pan.baidu.com/s/1dAFnki</a> 密码：5rsd</p>
-<p>还没有看过前几篇机器学习理论的童鞋，推荐先把前几篇看完。<br>这里接着上篇的 Logistic Regression 来讲。</p>
-<h2 id="Limitation-of-Logistic-Regression"><a href="#Limitation-of-Logistic-Regression" class="headerlink" title="Limitation of Logistic Regression"></a>Limitation of Logistic Regression</h2><p>看这样一个二元分类问题，假设我们有四个数据。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/1.jpg" alt=""></p>
-<p><img src="/2018/01/21/深度学习理论系列一/3.jpg" alt=""></p>
-<p><img src="/2018/01/21/深度学习理论系列一/2.jpg" alt=""></p>
-<p><img src="/2018/01/21/深度学习理论系列一/4.jpg" alt=""><br>y ≥ 0.5 相当于 z ≥ 0 ; y &lt; 0.5 相等于 z &lt; 0 ; 而 z 相当于一条直线。所以 LR 的任务就是找一条直线，把两组数据分到直线的两侧。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/5.jpg" alt=""><br>很明显，这是无法做到的。所以此时 LR 是无能为力的，我们怎么改进呢 ？</p>
-<p>做 Feature transformation ，举个例子。<br>我们把 x1 变成 x1 到 <img src="/2018/01/21/深度学习理论系列一/7.jpg" alt=""> 的距离<br>x2 变成 x2 到  <img src="/2018/01/21/深度学习理论系列一/8.jpg" alt=""> 的距离<br>这样就改变了原始数据的分布，我们就可以找到一条直线分隔 class1 和 class2 ，从而实现我们的分类任务。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/6.jpg" alt=""></p>
-<p>我们可不可以用几个 LR 连接起来解决呢？</p>
-<p><img src="/2018/01/21/深度学习理论系列一/9.jpg" alt=""><br>带进几个具体的数值看一下。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/10.jpg" alt=""><br>然后把每个数据代入，求出新的 x1 ,x2 如下：</p>
-<p><img src="/2018/01/21/深度学习理论系列一/11.jpg" alt=""><br>是的，达到了我们的目标！</p>
-<p>是的这就是深度学习！！！！每一个 LR 我们叫它 Neruron ( 神经元)。我们再看下它的结构</p>
-<p><img src="/2018/01/21/深度学习理论系列一/12.jpg" alt=""></p>
-<p>我们依旧举个例子吧，很简单，数字的识别吧。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/14.png" alt=""><br>当然，我们会先对它进行一些处理，去噪，二值化等，可以看下<a href="http://windliang.cc/2017/06/30/python%E7%AE%80%E5%8D%95%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/">这里</a>，让他变成只有黑白两种颜色。这样对于每个像素点就只有两个取值了。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/13.jpg" alt=""><br>每个像素点，我们都当做一维，这样我们每个数据就是这样</p>
-<p><img src="/2018/01/21/深度学习理论系列一/14.jpg" alt=""></p>
-<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><img src="/2018/01/21/深度学习理论系列一/15.jpg" alt=""><br>深度学习的 Model 不像之前可以有一个固定的式子，它中间的神经元可以随便连接，不同的连接就是一个新的 Model 。可以尝试不同的连接，从而找一个可以满足自己预期的模型。最常见的有下边一种Fully Connect Feedforward Network (前馈全连接神经网络) 。</p>
-<p>二维的图</p>
-<p><img src="/2018/01/21/深度学习理论系列一/16.jpg" alt=""><br>1 输入后到达第一个神经元会输出 0.98<br>-1 输入后到达第一个神经元会输出 0.12<br>我们的 S 形函数这里有了新的称谓，activation function ( 激励函数 )，当然它也可以不同S 形函数而换成别的函数，以后会讲到。</p>
-<p>一般的形式：</p>
-<p><img src="/2018/01/21/深度学习理论系列一/17.jpg" alt=""><br>输入 n 维的 x ，输出 m 维的 y ，每一维度代表属于该类的概率。<br>所以输出之前一般做一次 Softmax 。Softmax 是啥子嘞？中文翻译过来叫归一化指数函数 ，很形象，把每个值取 e 的幂次，然后归一一下。<br>假设我们有一个数组 V，Vi表示V中的第i个元素，那么这个元素的Softmax值就是 </p>
-<p><img src="/2018/01/21/深度学习理论系列一/18.jpg" alt=""></p>
-<h2 id="Goodness-of-Function"><a href="#Goodness-of-Function" class="headerlink" title="Goodness of Function"></a>Goodness of Function</h2><p>我们继续寻找它的 Loss Function ！</p>
-<p>我们先看一个数据的 loss ，例如是识别数字 1 。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/19.jpg" alt=""><br>是的，我们把 Model 求出的 y 与 $\hat{y}$ 向上篇文章一样做 Cross Entropy ( ( 交叉熵 ) ，忘记的话可以再看一下<a href="http://windliang.cc/2018/01/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA%E7%B3%BB%E5%88%97%E4%BA%94-Logistic-Regression-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">上篇</a> 。</p>
-<p>有了一个数据的 loss ，我们要做的就是把所有数据的 loss 求和。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/20.jpg" alt=""></p>
-<h2 id="Best-Function"><a href="#Best-Function" class="headerlink" title="Best  Function"></a>Best  Function</h2><p>我们得到了 Loss Function ，接下来就是求偏导，然后进行梯度下降。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/21.jpg" alt=""><br>是的你没有看错，高大上的深度学习依旧用的梯度下降，就算是 AlphaGo ，意不意外？惊不惊喜？</p>
-<p>咦？偏导的公式为什么这次没给推导呀？<br>你知道 L 长这个样子</p>
-<p><img src="/2018/01/21/深度学习理论系列一/23.jpg" alt=""><br>可是你知道 y 写出是什么样子吗？</p>
-<p>每经过一个神经元，其实就是矩阵相乘</p>
-<p><img src="/2018/01/21/深度学习理论系列一/24.jpg" alt=""><br>我们的 y 函数就是这样</p>
-<p><img src="/2018/01/21/深度学习理论系列一/25.jpg" alt=""><br>S 形函数一层套了一层，用笔去算偏导大概会疯掉。好在一些平台已经利用 Backpropagation ( 反向传播算法 ) 实现了梯度下降，我们直接去用就好了。</p>
-<p><img src="/2018/01/21/深度学习理论系列一/26.jpg" alt=""></p>
-<p>Backpropagation 以后我们再讲。</p>
-<p>好了，上边就是深度学习 Deep learning 的基本理论了！！！！！！！！！！！！！！</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>一图胜千言</p>
-<p><img src="/2018/01/21/深度学习理论系列一/27.jpg" alt=""><br>谷歌中用到了深度学习技术的项目数目，现在是真的火呀！</p>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
+        <h2 id="题目描述（中等难度）"><a href="#题目描述（中等难度）" class="headerlink" title="题目描述（中等难度）"></a>题目描述（中等难度）</h2><p><img src="http://pbs6qfi7i.bkt.clouddn.com/6_zig.jpg" alt=""></p>
+<p>就是给定一个字符串，然后按写竖着的 「z」的方式排列字符，就是下边的样子。</p>
+<p><img src="http://pbs6qfi7i.bkt.clouddn.com/6_1.jpg" alt=""></p>
+<p>然后按行的方式输出每个字符，第 0 行，第 1 行，第 2 行 ….</p>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>按照写 Z 的过程，遍历每个字符，然后将字符存到对应的行中。用 goningDown 保存当前的遍历方向，如果遍历到两端，就改变方向。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line"></span><br><span class="line">       List&lt;StringBuilder&gt; rows = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Math.min(numRows, s.length()); i++)</span><br><span class="line">           rows.add(<span class="keyword">new</span> StringBuilder());</span><br><span class="line"></span><br><span class="line">       <span class="keyword">int</span> curRow = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">boolean</span> goingDown = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">           rows.get(curRow).append(c);</span><br><span class="line">           <span class="keyword">if</span> (curRow == <span class="number">0</span> || curRow == numRows - <span class="number">1</span>) goingDown = !goingDown; <span class="comment">//遍历到两端，改变方向</span></span><br><span class="line">           curRow += goingDown ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       StringBuilder ret = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">       <span class="keyword">for</span> (StringBuilder row : rows) ret.append(row);</span><br><span class="line">       <span class="keyword">return</span> ret.toString();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O（n），n 是字符串的长度。</p>
+<p>空间复杂度：O（n），保存每个字符需要的空间。</p>
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>找出按 Z 形排列后字符的规律，然后直接保存起来。</p>
+<p><img src="http://pbs6qfi7i.bkt.clouddn.com/6_3.jpg" alt=""></p>
+<p>我们可以看到，图形其实是有周期的，0，1，2 … 7 总过 8 个，然后就又开始重复相同的路径。周期的计算就是 cycleLen = 2 × numRows - 2 = 2 × 5 - 2 = 8 个。</p>
+<p>我们发现第 0 行和最后一行一个周期内有一个字符，所以第一个字符下标是 0 ，第二个字符下标是 0 + cycleLen = 8，第三个字符下标是 8 + cycleLen = 16 。 </p>
+<p>其他行都是两个字符。</p>
+<p>第 1 个字符和第 0 行的规律是一样的。</p>
+<p>第 2 个字符其实就是下一个周期的第 0 行的下标减去当前行。什么意思呢？</p>
+<p>我们求一下第 1 行第 1 个周期内的第 2 个字符，下一个周期的第 0 行的下标是 8 ，减去当前行 1 ，就是 7 了。</p>
+<p>我们求一下第 1 行第 2 个而周期内的第 2 个字符，下一个周期的第 0 行的下标是 16 ，减去当前行 1 ，就是 15 了。</p>
+<p>我们求一下第 2 行第 1 个周期内的第 2 个字符，下一个周期的第 0 行的下标是 8 ，减去当前行 2 ，就是 6 了。</p>
+<p>当然期间一定要保证下标小于 n ，防止越界。</p>
+<p>可以写代码了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (numRows == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> s;</span><br><span class="line"></span><br><span class="line">	StringBuilder ret = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">	<span class="keyword">int</span> n = s.length();</span><br><span class="line">	<span class="keyword">int</span> cycleLen = <span class="number">2</span> * numRows - <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j + i &lt; n; j += cycleLen) &#123; <span class="comment">//每次加一个周期</span></span><br><span class="line">			ret.append(s.charAt(j + i));</span><br><span class="line">			<span class="keyword">if</span> (i != <span class="number">0</span> &amp;&amp; i != numRows - <span class="number">1</span> &amp;&amp; j + cycleLen - i &lt; n) <span class="comment">//除去第 0 行和最后一行</span></span><br><span class="line">				ret.append(s.charAt(j + cycleLen - i));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O（n），虽然是两层循环，但第二次循环每次加的是 cycleLen ，无非是把每个字符遍历了 1 次，所以两层循环内执行的次数肯定是字符串的长度。</p>
+<p>空间复杂度：O（n），保存字符串。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次算是总结起来最轻松的了，这道题有些找规律的意思。解法一顺着排列的方式遍历，解法二直接从答案入口找出下标的规律。</p>
 
       
     </div>
@@ -515,11 +470,7 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
-            <a href="/tags/深度学习/" rel="tag"># 深度学习</a>
-          
-            <a href="/tags/神经网络/" rel="tag"># 神经网络</a>
+            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
         </div>
       
@@ -532,8 +483,8 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/" rel="next" title="机器学习理论系列五 : Logistic Regression (逻辑回归)">
-                <i class="fa fa-chevron-left"></i> 机器学习理论系列五 : Logistic Regression (逻辑回归)
+              <a href="/2018/08/05/leetCode-5-Longest-Palindromic-Substring/" rel="next" title="leetCode_5_Longest_Palindromic_Substring">
+                <i class="fa fa-chevron-left"></i> leetCode_5_Longest_Palindromic_Substring
               </a>
             
           </div>
@@ -541,10 +492,6 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/13/leetCode-1-Two-Sum/" rel="prev" title="leetCode_1_Two_Sum">
-                leetCode_1_Two_Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -762,7 +709,7 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Limitation-of-Logistic-Regression"><span class="nav-number">1.</span> <span class="nav-text">Limitation of Logistic Regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Model"><span class="nav-number">2.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Goodness-of-Function"><span class="nav-number">3.</span> <span class="nav-text">Goodness of Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Best-Function"><span class="nav-number">4.</span> <span class="nav-text">Best  Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">5.</span> <span class="nav-text">应用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述（中等难度）"><span class="nav-number">1.</span> <span class="nav-text">题目描述（中等难度）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法一"><span class="nav-number">2.</span> <span class="nav-text">解法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法二"><span class="nav-number">3.</span> <span class="nav-text">解法二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -1083,30 +1030,6 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
