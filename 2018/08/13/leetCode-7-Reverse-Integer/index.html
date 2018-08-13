@@ -118,7 +118,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/7_rev.jpg">
 <meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/7_1.jpg">
-<meta property="og:updated_time" content="2018-08-13T07:07:27.335Z">
+<meta property="og:updated_time" content="2018-08-13T07:11:05.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetCode_7_Reverse_Integer">
 <meta name="twitter:description" content="题目描述（简单难度） 很简单，就是输入整数，输出它的倒置。 第一反应就是， 取余得到个位数，然后除以 10 去掉个位数，然后用一个变量保存倒置的数。 123456789public int reverse(int x) &amp;#123;    int rev = 0;    while (x != 0) &amp;#123;        int pop = x % 10;        x /= 10;">
@@ -350,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2018-08-13 13:13:00 / 修改时间：15:07:27" itemprop="dateCreated datePublished" datetime="2018-08-13T13:13:00+08:00">2018-08-13</time>
+              <time title="创建时间：2018-08-13 13:13:00 / 修改时间：15:11:05" itemprop="dateCreated datePublished" datetime="2018-08-13T13:13:00+08:00">2018-08-13</time>
             
 
             
@@ -433,7 +433,7 @@
 <p>对于大于 intMax 的讨论，此时 x 一定是正数，pop 也是正数。</p>
 <ul>
 <li>如果 rev &gt; intMax / 10 ，那么没的说，此时肯定溢出了。</li>
-<li>如果 rev == intMax / 10 = 2147483647 / 10 = 214748364 ，此时 rev * 10 就是 2147483640 如果，pop 大于 7 ，那么就一定溢出了。但是！如果假设 pop 等于 8，那么意味着原数 x 是 8463847412 了，输入的是 int ，而此时是溢出的状态，所以不可能输入，所以意味着 pop 不可能大于 7 ，也就意味着 rev == intMax / 10 时不会造成溢出。</li>
+<li>如果 rev == intMax / 10 = 2147483647 / 10 = 214748364 ，此时 rev * 10 就是 2147483640 如果 pop 大于 7 ，那么就一定溢出了。但是！如果假设 pop 等于 8，那么意味着原数 x 是 8463847412 了，输入的是 int ，而此时是溢出的状态，所以不可能输入，所以意味着 pop 不可能大于 7 ，也就意味着 rev == intMax / 10 时不会造成溢出。</li>
 <li>如果 rev &lt; intMax / 10 ，意味着 rev 最大是 214748363 ， rev * 10 就是 2147483630 , 此时再加上 pop ，一定不会溢出。 </li>
 </ul>
 <p>对于小于 intMin 的讨论同理。</p>
