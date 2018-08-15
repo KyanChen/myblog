@@ -116,13 +116,13 @@
 <meta property="og:site_name" content="windliang">
 <meta property="og:description" content="题目描述（简单难度） 很简单，就是输入整数，输出它的倒置。 第一反应就是， 取余得到个位数，然后除以 10 去掉个位数，然后用一个变量保存倒置的数。 123456789public int reverse(int x) &amp;#123;    int rev = 0;    while (x != 0) &amp;#123;        int pop = x % 10;        x /= 10;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/7_rev.jpg">
-<meta property="og:image" content="http://pbs6qfi7i.bkt.clouddn.com/7_1.jpg">
-<meta property="og:updated_time" content="2018-08-13T07:11:05.627Z">
+<meta property="og:image" content="http://windliang.oss-cn-beijing.aliyuncs.com/7_rev.jpg">
+<meta property="og:image" content="http://windliang.oss-cn-beijing.aliyuncs.com/7_1.jpg">
+<meta property="og:updated_time" content="2018-08-15T13:51:44.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetCode_7_Reverse_Integer">
 <meta name="twitter:description" content="题目描述（简单难度） 很简单，就是输入整数，输出它的倒置。 第一反应就是， 取余得到个位数，然后除以 10 去掉个位数，然后用一个变量保存倒置的数。 123456789public int reverse(int x) &amp;#123;    int rev = 0;    while (x != 0) &amp;#123;        int pop = x % 10;        x /= 10;">
-<meta name="twitter:image" content="http://pbs6qfi7i.bkt.clouddn.com/7_rev.jpg">
+<meta name="twitter:image" content="http://windliang.oss-cn-beijing.aliyuncs.com/7_rev.jpg">
 
 
 
@@ -350,12 +350,24 @@
                 
               
 
-              <time title="创建时间：2018-08-13 13:13:00 / 修改时间：15:11:05" itemprop="dateCreated datePublished" datetime="2018-08-13T13:13:00+08:00">2018-08-13</time>
+              <time title="创建时间：2018-08-13 13:13:00" itemprop="dateCreated datePublished" datetime="2018-08-13T13:13:00+08:00">2018-08-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-15 21:51:44" itemprop="dateModified" datetime="2018-08-15T21:51:44+08:00">2018-08-15</time>
               
             
           </span>
@@ -417,12 +429,12 @@
       
 
       
-        <h2 id="题目描述（简单难度）"><a href="#题目描述（简单难度）" class="headerlink" title="题目描述（简单难度）"></a>题目描述（简单难度）</h2><p><img src="http://pbs6qfi7i.bkt.clouddn.com/7_rev.jpg" alt=""></p>
+        <h2 id="题目描述（简单难度）"><a href="#题目描述（简单难度）" class="headerlink" title="题目描述（简单难度）"></a>题目描述（简单难度）</h2><p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/7_rev.jpg" alt=""></p>
 <p>很简单，就是输入整数，输出它的倒置。</p>
 <p>第一反应就是， 取余得到个位数，然后除以 10 去掉个位数，然后用一个变量保存倒置的数。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> rev = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> pop = x % <span class="number">10</span>;</span><br><span class="line">        x /= <span class="number">10</span>;</span><br><span class="line">        rev = rev * <span class="number">10</span> + pop;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> rev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后似乎不是那么理想。</p>
-<p><img src="http://pbs6qfi7i.bkt.clouddn.com/7_1.jpg" alt=""></p>
+<p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/7_1.jpg" alt=""></p>
 <p>为什么呢？倒置过来不应该是 9646324351 吗。其实题目里讲了，int 的范围是 $[-2^{31} ,2^{31}-1]$ 也就是 $[-2147483648,2147483647] $ 。明显 9646324351 超出了范围，造成了溢出。所以我们需要在输出前，判断是否溢出。</p>
 <p>问题的关键就是下边的一句了。</p>
 <p> rev = rev * 10 + pop;</p>
