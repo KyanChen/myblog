@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/emoji.jpg">
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/emoji2.jpg">
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/mini.png">
-<meta property="og:updated_time" content="2019-07-16T16:30:38.485Z">
+<meta property="og:updated_time" content="2019-07-16T16:36:20.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="追本溯源：字符串及编码">
 <meta name="twitter:description" content="开始 先考虑下边的问题。 123456let s = &quot;js&quot;console.log(s.length)s= &quot;亮&quot;console.log(s.length)s = &quot;𫠂&quot;console.log(s.length) 我们知道 length 就是字符串的字符数，所以输出的依次是 2，1，1，对吗？ 探索一我们知道，计算机里只能存 0 和 1，换言之，只能存数字，而我们现在在屏幕上看到的文字只是将数">
@@ -380,7 +380,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-17 00:30:38" itemprop="dateModified" datetime="2019-07-17T00:30:38+08:00">2019-07-17</time>
+                <time title="修改时间：2019-07-17 00:36:20" itemprop="dateModified" datetime="2019-07-17T00:36:20+08:00">2019-07-17</time>
               
             
           </span>
@@ -467,7 +467,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; Unicode 符号范围     |        UTF-<span class="number">8</span> 编码方式</span><br><span class="line">&gt; (十六进制)           |           （二进制）</span><br><span class="line">&gt; ----------------------+---------------------------------------------</span><br><span class="line">&gt; <span class="number">0000</span> <span class="number">0000</span> - <span class="number">0000</span> <span class="number">007F</span> | <span class="number">0</span>xxxxxxx</span><br><span class="line">&gt; <span class="number">0000</span> <span class="number">0080</span> - <span class="number">0000</span> <span class="number">07F</span>F | <span class="number">110</span>xxxxx <span class="number">10</span>xxxxxx</span><br><span class="line">&gt; <span class="number">0000</span> <span class="number">0800</span> - <span class="number">0000</span> FFFF | <span class="number">1110</span>xxxx <span class="number">10</span>xxxxxx <span class="number">10</span>xxxxxx</span><br><span class="line">&gt; <span class="number">0001</span> <span class="number">0000</span> - <span class="number">0010</span> FFFF | <span class="number">11110</span>xxx <span class="number">10</span>xxxxxx <span class="number">10</span>xxxxxx <span class="number">10</span>xxxxxx</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>跟据上表，解读 UTF-8 编码非常简单。如果一个字节的第一位是<code>0</code>，则这个字节单独就是一个字符；如果第一位是<code>1</code>，则连续有多少个<code>1</code>，就表示当前字符占用多少个字节。</p>
+<p>根据上表，解读 UTF-8 编码非常简单。如果一个字节的第一位是<code>0</code>，则这个字节单独就是一个字符；如果第一位是<code>1</code>，则连续有多少个<code>1</code>，就表示当前字符占用多少个字节。</p>
 <p>下面，还是以汉字<code>严</code>为例，演示如何实现 UTF-8 编码。</p>
 <p><code>严</code>的 Unicode 是<code>4E25</code>（<code>100111000100101</code>），根据上表，可以发现<code>4E25</code>处在第三行的范围内（<code>0000 0800 - 0000 FFFF</code>），因此<code>严</code>的 UTF-8 编码需要三个字节，即格式是<code>1110xxxx 10xxxxxx 10xxxxxx</code>。然后，从<code>严</code>的最右边二进制位开始，依次从右往左填入上边格式中的<code>x</code>，多出的位补<code>0</code>。这样就得到了，<code>严</code>的 UTF-8 编码是<code>11100100 10111000 10100101</code>，转换成十六进制就是<code>E4 B8 A5</code>。</p>
 </blockquote>
@@ -585,6 +585,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/23/理解进制转换的原理/" rel="prev" title="理解进制转换的原理">
+                理解进制转换的原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -661,7 +665,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -803,7 +807,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">48</span>
+                      
+                    
+                    <span class="site-state-item-count">49</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
