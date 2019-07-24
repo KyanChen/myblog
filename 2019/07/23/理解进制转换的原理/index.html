@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/float5.jpg">
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/float6.jpg">
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/float7.jpg">
-<meta property="og:updated_time" content="2019-07-24T08:05:47.458Z">
+<meta property="og:updated_time" content="2019-07-24T08:30:54.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解进制转换的原理">
 <meta name="twitter:description" content="准备写一篇关于浮点数存储的，然后先写了进制转换，越写越多，就单独作为一篇文章吧。 2019.723，这个数的二进制形式是什么样呢？让我们慢慢考虑。 数字的概念首先思考一下数字是什么？为什么要有数字。 我有一个苹果，你脑海中会出现一个苹果。 我有五个苹果，你脑海中会出现五个苹果。 我有三十个苹果，你脑海中会出现三十个苹果。 我有一千个苹果，你可能想象不出来了。 数字的作用，就是让我们对一个东西的数量">
@@ -372,7 +372,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-24 16:05:47" itemprop="dateModified" datetime="2019-07-24T16:05:47+08:00">2019-07-24</time>
+                <time title="修改时间：2019-07-24 16:30:54" itemprop="dateModified" datetime="2019-07-24T16:30:54+08:00">2019-07-24</time>
               
             
           </span>
@@ -485,8 +485,7 @@
 <p>$$…+a\times2^3+b\times2^2+c\times2^1+d\times2^0+e\times2^{-1}+f\times2^{-2}+g\times2^{-3}+…$$</p>
 <p>a，b，c … 代表<code>0</code>和 <code>1</code>中的一个，现在的数量是 a 个 8，b 个 4，c 个 2 ……</p>
 <p>所以<code>1100</code>如果用十进制表示，就是 1 个 8 加上 1 个 4，也就是<code>12</code>了。这样的话，我们就可以理解他买了多少苹果了。</p>
-<p>#十进制转二进制</p>
-<p>那么十进制怎么转换成二进制呢？最开始的问题，怎么用二进制去表示 <code>2019.723</code>。</p>
+<h1 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h1><p>那么十进制怎么转换成二进制呢？最开始的问题，怎么用二进制去表示 <code>2019.723</code>。</p>
 <h2 id="整数的转换"><a href="#整数的转换" class="headerlink" title="整数的转换"></a>整数的转换</h2><p>其实这就是数学上的问题了，首先我们考虑整数部分<code>2019</code>。根据前边二进制转十进制的公式，我们知道可以有下边的等式。</p>
 <p>$$…a\times2^4+b\times2^3+c\times2^2+d\times2^1+e\times2^0=2019$$</p>
 <p>两边如果同时除以 2 会发生什么呢，</p>
@@ -507,7 +506,7 @@
 <p>因为我们每次求出的都是二进制对应的低位，书写的话习惯于先写高位，所以倒着写过来 <code>11111100011</code>就是<code>2019</code>的二进制形式了。</p>
 <p>写成代码的形式。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Integer&gt; <span class="title">integerTrans</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">        list.add(n % <span class="number">2</span>);</span><br><span class="line">        n /= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = list.size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        System.out.print(list.get(i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="小数的转换"><a href="#小数的转换" class="headerlink" title="小数的转换"></a>小数的转换</h1><p>考虑完整数，再来想一下小数<code>0.723</code>怎么处理。同样的，利用二进制转十进制的公式，写出下边的等式。</p>
+<h2 id="小数的转换"><a href="#小数的转换" class="headerlink" title="小数的转换"></a>小数的转换</h2><p>考虑完整数，再来想一下小数<code>0.723</code>怎么处理。同样的，利用二进制转十进制的公式，写出下边的等式。</p>
 <p>$$e\times2^{-1}+f\times2^{-2}+g\times2^{-3}+…=0.723$$</p>
 <p>之前同时是利用两边同时除以<code>2</code>，对于上边的等式肯定不行了。换一下，两边同时乘以<code>2</code>呢？看看会发生什么。</p>
 <p>$$e\times2^{0}+f\times2^{-1}+g\times2^{-2}+…=0.723\times2$$</p>
@@ -859,7 +858,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数字的概念"><span class="nav-number">1.</span> <span class="nav-text">数字的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数字的记录"><span class="nav-number">2.</span> <span class="nav-text">数字的记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进制的概念"><span class="nav-number">3.</span> <span class="nav-text">进制的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制转十进制"><span class="nav-number">4.</span> <span class="nav-text">二进制转十进制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数的转换"><span class="nav-number">4.1.</span> <span class="nav-text">整数的转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小数的转换"><span class="nav-number">5.</span> <span class="nav-text">小数的转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#历史的发展"><span class="nav-number">6.</span> <span class="nav-text">历史的发展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束"><span class="nav-number">7.</span> <span class="nav-text">结束</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数字的概念"><span class="nav-number">1.</span> <span class="nav-text">数字的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数字的记录"><span class="nav-number">2.</span> <span class="nav-text">数字的记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进制的概念"><span class="nav-number">3.</span> <span class="nav-text">进制的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制转十进制"><span class="nav-number">4.</span> <span class="nav-text">二进制转十进制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十进制转二进制"><span class="nav-number">5.</span> <span class="nav-text">十进制转二进制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数的转换"><span class="nav-number">5.1.</span> <span class="nav-text">整数的转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小数的转换"><span class="nav-number">5.2.</span> <span class="nav-text">小数的转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#历史的发展"><span class="nav-number">6.</span> <span class="nav-text">历史的发展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束"><span class="nav-number">7.</span> <span class="nav-text">结束</span></a></li></ol></div>
             
 
           </div>
