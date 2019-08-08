@@ -124,7 +124,7 @@
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/float12.jpg">
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/float13.jpg">
 <meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/float14.jpg">
-<meta property="og:updated_time" content="2019-07-28T14:47:42.578Z">
+<meta property="og:updated_time" content="2019-07-28T15:34:45.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一直迷糊的浮点数">
 <meta name="twitter:description" content="之前写了 进制转换，也写了计算机怎么 存整数，那么问题来了，计算机中小数怎么存呢？比如2019.725怎么放到计算机里呢？-2019.725又该怎么办呢？ 我们有什么首先想一下我们有什么，计算机怎么存数。假如我们的计算机是存 32 位的，那么它就长下边的样子。  由于我们写数字，习惯于先写高位，所以把最低位画到了最右边。 我们需要做的就是把0和1放到上边的方框中，来表示2019.725。换言之，我">
@@ -373,7 +373,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-28 22:47:42" itemprop="dateModified" datetime="2019-07-28T22:47:42+08:00">2019-07-28</time>
+                <time title="修改时间：2019-07-28 23:34:45" itemprop="dateModified" datetime="2019-07-28T23:34:45+08:00">2019-07-28</time>
               
             
           </span>
@@ -524,7 +524,7 @@
 <p>此外，最后 <code>3</code> 位本来是<code>100</code>，因为<code>100</code>后边一位是<code>1</code>，所以相当于产生进位变成<code>101</code>。</p>
 <p>这个二进制数还原为<code>10</code>进制的话就是<code>0.10000000149011612</code>。</p>
 <p>让我们来验证一下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(String.format(<span class="string">"%#.18f"</span>, <span class="number">0.1f</span>));</span><br><span class="line"><span class="comment">//0.100000001490116120</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(String.format(<span class="string">"%.18f"</span>, <span class="number">0.1f</span>));</span><br><span class="line"><span class="comment">//0.100000001490116120</span></span><br></pre></td></tr></table></figure>
 <p>和我们预想的完全一样，而如果不加限制直接输出<code>0.1</code>，显示<code>0.1</code>只是因为默认的有效位数比较少，其实只是输出了近似值<code>0.1</code>。</p>
 <h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>浮点数的探究到此结束了，回顾一下，前两种方法我们先从十进制的角度来考虑，通过存整数来存小数，从而保证了我们可以精确存数。思路三，我们先把十进制转成二进制去存，这就产生了不能精确的存储数的问题。同时有两个技巧也值得注意，第一个就是用存储指数的时候，我们用正数表示负数。第二个就是，默认规定最高位是<code>1</code>，从而用<code>23</code>个比特位存了<code>24</code>位的数据。</p>
 
@@ -579,6 +579,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/08/windows方便的批处理/" rel="prev" title="windows方便的批处理-批量修改文件夹名">
+                windows方便的批处理-批量修改文件夹名 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -656,7 +660,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -689,7 +693,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -800,7 +806,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">49</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">51</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
