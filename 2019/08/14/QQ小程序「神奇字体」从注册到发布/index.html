@@ -108,33 +108,54 @@
 
 
 
-  <meta name="description" content="起因今天同学有一个批量改文件夹名字的需求，因为非计算机专业的同学电脑肯定不会有 python 或者 java 的环境了，那么 windows 自带的批处理编程一定是最好的选择了，新建一个 .txt，改后缀命为 .bat，双击就可以运行了。 利用批处理的一些命令，可以做很多事情，之前在知乎回答过一个问题，一行代码可以做什么。 里边提到了锁屏和 windows 计划任务的结合。 1rundll32.e">
-<meta name="keywords" content="批处理,bat">
+  <meta name="description" content="QQ 小程序最开始是邀请制的，在上个月差不多快中旬的时候对开发者全面开放了，把之前的微信小程序「神奇字体」搬了过去，关于微信小程序详见 小程序神奇字体的从零到一。 这里分享下 QQ 小程序从零到一的搬移过程。 认证首先是去注册 QQ 小程序，进行认证开发者，然后才能发布小程序，大概认证了快一周左右吧。 开发工具和微信小程序一样，先下了客户端。  再看下微信小程序的开发界面。  有没有发现不同之处。">
+<meta name="keywords" content="随想,前端,小程序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows方便的批处理-批量修改文件夹名">
-<meta property="og:url" content="http://windliang.cc/2019/08/08/windows方便的批处理/index.html">
+<meta property="og:title" content="QQ小程序「神奇字体」从注册到发布">
+<meta property="og:url" content="http://windliang.cc/2019/08/14/QQ小程序「神奇字体」从注册到发布/index.html">
 <meta property="og:site_name" content="windliang">
-<meta property="og:description" content="起因今天同学有一个批量改文件夹名字的需求，因为非计算机专业的同学电脑肯定不会有 python 或者 java 的环境了，那么 windows 自带的批处理编程一定是最好的选择了，新建一个 .txt，改后缀命为 .bat，双击就可以运行了。 利用批处理的一些命令，可以做很多事情，之前在知乎回答过一个问题，一行代码可以做什么。 里边提到了锁屏和 windows 计划任务的结合。 1rundll32.e">
+<meta property="og:description" content="QQ 小程序最开始是邀请制的，在上个月差不多快中旬的时候对开发者全面开放了，把之前的微信小程序「神奇字体」搬了过去，关于微信小程序详见 小程序神奇字体的从零到一。 这里分享下 QQ 小程序从零到一的搬移过程。 认证首先是去注册 QQ 小程序，进行认证开发者，然后才能发布小程序，大概认证了快一周左右吧。 开发工具和微信小程序一样，先下了客户端。  再看下微信小程序的开发界面。  有没有发现不同之处。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat1.jpg">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat2.jpg">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat1.jpg">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat3.jpg">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat4.jpg">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat5.jpg">
-<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat6.jpg">
-<meta property="og:updated_time" content="2019-08-08T16:49:52.180Z">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qqmini.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/wxmini.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq2.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/wx2.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq22.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq23.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq24.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq3.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq4.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq6.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq7.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq8.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq9.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq10.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq11.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq12.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq13.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq14.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq15.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq16.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq18.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq19.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq20.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq21.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq26.jpg">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq27.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq28.png">
+<meta property="og:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq25.jpg">
+<meta property="og:updated_time" content="2019-08-14T06:18:45.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows方便的批处理-批量修改文件夹名">
-<meta name="twitter:description" content="起因今天同学有一个批量改文件夹名字的需求，因为非计算机专业的同学电脑肯定不会有 python 或者 java 的环境了，那么 windows 自带的批处理编程一定是最好的选择了，新建一个 .txt，改后缀命为 .bat，双击就可以运行了。 利用批处理的一些命令，可以做很多事情，之前在知乎回答过一个问题，一行代码可以做什么。 里边提到了锁屏和 windows 计划任务的结合。 1rundll32.e">
-<meta name="twitter:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat1.jpg">
+<meta name="twitter:title" content="QQ小程序「神奇字体」从注册到发布">
+<meta name="twitter:description" content="QQ 小程序最开始是邀请制的，在上个月差不多快中旬的时候对开发者全面开放了，把之前的微信小程序「神奇字体」搬了过去，关于微信小程序详见 小程序神奇字体的从零到一。 这里分享下 QQ 小程序从零到一的搬移过程。 认证首先是去注册 QQ 小程序，进行认证开发者，然后才能发布小程序，大概认证了快一周左右吧。 开发工具和微信小程序一样，先下了客户端。  再看下微信小程序的开发界面。  有没有发现不同之处。">
+<meta name="twitter:image" content="https://windliangblog.oss-cn-beijing.aliyuncs.com/qqmini.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/2019/08/08/windows方便的批处理/"/>
+  <link rel="canonical" href="http://windliang.cc/2019/08/14/QQ小程序「神奇字体」从注册到发布/"/>
 
 
 
@@ -144,7 +165,7 @@
   };
 </script>
 
-  <title>windows方便的批处理-批量修改文件夹名 | windliang</title>
+  <title>QQ小程序「神奇字体」从注册到发布 | windliang</title>
   
 
 
@@ -313,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2019/08/08/windows方便的批处理/">
+    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2019/08/14/QQ小程序「神奇字体」从注册到发布/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="windliang">
@@ -330,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">windows方便的批处理-批量修改文件夹名
+          <h1 class="post-title" itemprop="name headline">QQ小程序「神奇字体」从注册到发布
               
             
           </h1>
@@ -355,24 +376,12 @@
                 
               
 
-              <time title="创建时间：2019-08-08 23:18:46" itemprop="dateCreated datePublished" datetime="2019-08-08T23:18:46+08:00">2019-08-08</time>
+              <time title="创建时间：2019-08-14 11:53:16 / 修改时间：14:18:45" itemprop="dateCreated datePublished" datetime="2019-08-14T11:53:16+08:00">2019-08-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-09 00:49:52" itemprop="dateModified" datetime="2019-08-09T00:49:52+08:00">2019-08-09</time>
               
             
           </span>
@@ -389,7 +398,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随想/" itemprop="url" rel="index"><span itemprop="name">随想</span></a></span>
 
                 
                 
@@ -403,7 +412,7 @@
 
           
           
-             <span id="/2019/08/08/windows方便的批处理/" class="leancloud_visitors" data-flag-title="windows方便的批处理-批量修改文件夹名">
+             <span id="/2019/08/14/QQ小程序「神奇字体」从注册到发布/" class="leancloud_visitors" data-flag-title="QQ小程序「神奇字体」从注册到发布">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -434,73 +443,92 @@
       
 
       
-        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>今天同学有一个批量改文件夹名字的需求，因为非计算机专业的同学电脑肯定不会有 <code>python</code> 或者 <code>java</code> 的环境了，那么 <code>windows</code> 自带的批处理编程一定是最好的选择了，新建一个 <code>.txt</code>，改后缀命为 <code>.bat</code>，双击就可以运行了。</p>
-<p>利用批处理的一些命令，可以做很多事情，之前在知乎回答过一个问题，<a href="https://www.zhihu.com/question/285586045/answer/445364909" target="_blank" rel="noopener">一行代码可以做什么</a>。</p>
-<p>里边提到了锁屏和 <code>windows</code> 计划任务的结合。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rundll32.exe user32.dll,LockWorkStation</span><br></pre></td></tr></table></figure>
-<p>定时关机，<code>1800</code> 秒后关机。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shutdown -s -t <span class="number">1800</span></span><br></pre></td></tr></table></figure>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>他想把很多个文件夹的名字从 <code>abcd1233-afdasfs</code> 改成 <code>1233 abcd1233-afdasfs</code>，所有文件夹的格式都是 <code>4</code>个字母，<code>4</code> 个数字，然后一个<code>-</code>，最后再跟一些字符。需要做的就是把<code>4</code>个数字添加到文件夹名字的最前面，并且跟一个空格。</p>
-<h1 id="尝试一"><a href="#尝试一" class="headerlink" title="尝试一"></a>尝试一</h1><p>我也是第一次写批处理的程序，但是不慌，编程嘛，重要的是算法，语言的语法查一查就可以了。所以需要解决下边几个问题。</p>
-<ul>
-<li><p>定义变量</p>
-<p><code>set name=XXX</code></p>
-<p>注意的是，默认赋值就是赋值字符串，而且也不用加双引号</p>
-<p>如果想赋值数字，需要再 <code>set</code> 后边添加命令参数 <code>/a</code>。</p>
-<p><code>set /a num=1</code></p>
-</li>
-<li><p>取出变量的值，百分号包裹变量名</p>
-<p><code>%name%</code></p>
-</li>
-<li><p>输出变量的值</p>
-<p><code>echo %name%</code></p>
-</li>
-<li><p><code>for</code>循环遍历所有文件夹名，所有变量都保存在了 <code>%%i</code>变量里，至于为啥加了两百分号，不要问，问的话，我也不知道 2333，就是规定而已。此外加了 <code>/d</code> 命令参数，表示遍历文件夹</p>
-<p><code>for /d  %%i in (*) do (</code> </p>
-</li>
-<li><p>因为我们要取到文件夹名字中的数字，所以要进行切割</p>
-<p><code>set newname=%name:~4,4%</code><br>语法就是，字符串变量加冒号加<code>~</code>，然后两个数字的含义分别是字符串开始的位置以及字符的个数，开始位置从零开始计数</p>
-</li>
-<li><p>更改文件夹名字</p>
-<p><code>ren oldname newname</code></p>
-</li>
-<li><p>还有一个一定会用的，注释代码</p>
-<p>两种， <code>::</code> 加语句，或者 <code>rem</code> 加语句，推荐<code>rem</code>吧，因为<code>::</code> 我遇到了不知道什么原因的错误。</p>
-</li>
-</ul>
-<p>知道了上边的一切，就可以写出代码了，但写完之后发现个问题，我们用 <code>%name%</code>并不能得到变量的值，查了查，原来在 <code>for</code> 循环中要用 <code>!name!</code>。并且开头加上<code>setlocal enabledelayedexpansion</code>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">rem ehco 设置为 off，不然的话运行会显示每条语句</span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem 防止中文乱码的</span><br><span class="line">chcp 65001 </span><br><span class="line">setlocal enabledelayedexpansion </span><br><span class="line"><span class="keyword">for</span> /d  %%i <span class="keyword">in</span> (*) <span class="keyword">do</span> (   </span><br><span class="line">    <span class="built_in">set</span> name=%%i</span><br><span class="line">    <span class="built_in">echo</span> !name! </span><br><span class="line">    rem 字符串合并，四个数字加上空格再加上之前的名字，不用双引号</span><br><span class="line">    <span class="built_in">set</span> newname=!name:~4,4! !name!   </span><br><span class="line">    rem 因为 newname 中有空格，所以要加双引号</span><br><span class="line">    ren !name! <span class="string">"!newname!"</span></span><br><span class="line">    </span><br><span class="line">)   </span><br><span class="line"><span class="built_in">echo</span> 处理完成 </span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-<p>假如我们有下边的文件夹</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat1.jpg" alt></p>
-<p>然后把上边的代码复制保存为 <code>.bat</code>，执行</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat2.jpg" alt></p>
-<p>很完美，达到预期。</p>
-<h1 id="问题升级"><a href="#问题升级" class="headerlink" title="问题升级"></a>问题升级</h1><p>写完代码以后和同学确认了一下需求，出现了一个问题，有的文件夹名字是 <code>（啊）abcd1233-afdasfs</code> 、<code>（啊啊）abcd1233-afdasfs</code> 这样的形式，也就是说数字开始的位置不一定是 <code>4</code> 了。怎么办呢？</p>
-<h1 id="尝试二"><a href="#尝试二" class="headerlink" title="尝试二"></a>尝试二</h1><p>我们只要知道 <code>-</code> 的下标，往前数 <code>4</code> 个数字就可以了，没有找到什么直接的方法，找到一种利用 <code>goto</code> 的方案。</p>
-<p><code>goto</code> 语法就是先用 <code>:label</code>定义一个位置，然后 <code>goto label</code> 就可以实现循环了。</p>
-<p>所以我们的想法就是遍历文件夹的名字的字符串，得到 <code>-</code> 的位置。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">chcp 65001 </span><br><span class="line">setlocal enabledelayedexpansion </span><br><span class="line">for /d  %%i in (*) do (   </span><br><span class="line">    set name=%%i</span><br><span class="line">    echo !name!</span><br><span class="line">    set str=%%i </span><br><span class="line">    set /a num=0 </span><br><span class="line">  	:next</span><br><span class="line">    if  not !str!==&quot;&quot; ( </span><br><span class="line">       set /a num+=1</span><br><span class="line">  	   if &quot;!str:~0,1!&quot;==&quot;-&quot; goto last</span><br><span class="line">       set str=!str:~1!  </span><br><span class="line">       goto next</span><br><span class="line">    )</span><br><span class="line">    set /a num=0 </span><br><span class="line">    :last</span><br><span class="line">    echo 字符-在字符串&quot;!name!&quot;中的首次出现位置为!num!</span><br><span class="line">    set newname=!name:~4,4! !name!   </span><br><span class="line">    </span><br><span class="line">)   </span><br><span class="line">echo 处理完成 </span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-<p>理想是美满的，现实是残酷的，本以为解决了，然后运行测试了一下。</p>
-<p>比如我们有下边样子的文件夹</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat1.jpg" alt></p>
-<p>然后把上边的代码保存成 <code>.bat</code> 执行会发现结果是下边的样子</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat3.jpg" alt></p>
-<p><code>-</code> 的位置找对了，但是…为什么只找了一次，我们的<code>for</code>循环怎么没用了 。</p>
-<p>几经试探，搜索。发现微软的批处理命令不知道基于什么考虑，如果我们在 <code>for</code> 循环中用了 <code>goto</code>，那么 <code>for</code> 循环就会自动结束。没办法，我们得换思路了。</p>
-<h1 id="最终尝试"><a href="#最终尝试" class="headerlink" title="最终尝试"></a>最终尝试</h1><p>网上找了找，找到一种截取某一个字符前的字符串的方法。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> /f <span class="string">"delims=-"</span> %%n <span class="keyword">in</span> (<span class="string">'echo %%i'</span>) <span class="keyword">do</span> ( </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>这里的 <code>%%n</code> 就会保存 <code>-</code> 前边的字符串了。然后我们保存倒数四个的字符串就可以了。而倒数其实也提供了方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">截取通过倒数方式指定开始位置的整个字符串：%key:~-<span class="number">2</span>%，表示截取从倒数第 <span class="number">2</span> 个字符开始的整个字符串</span><br><span class="line">正数倒数方式相结合：%key:~<span class="number">2</span>,-<span class="number">2</span>%，表示截取从下标 <span class="number">2</span> 开始到倒数第 <span class="number">2</span> 个之间的字符串</span><br></pre></td></tr></table></figure>
-<p>所以我们最后的代码就是下边的了，注意用等号赋值的时候可能习惯左右加空格，这里就不要加了，会出错。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">chcp 65001 </span><br><span class="line">setlocal enabledelayedexpansion </span><br><span class="line"><span class="keyword">for</span> /d  %%i <span class="keyword">in</span> (*) <span class="keyword">do</span> (    </span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">  	rem <span class="built_in">set</span> newname=%%i </span><br><span class="line">    <span class="keyword">for</span> /f <span class="string">"delims=-"</span> %%n <span class="keyword">in</span> (<span class="string">'echo %%i'</span>) <span class="keyword">do</span> ( </span><br><span class="line">       <span class="built_in">set</span> name=%%n</span><br><span class="line">       <span class="built_in">set</span> newname=!name:~-4! %%i</span><br><span class="line">   )</span><br><span class="line">   ren <span class="string">"%%i"</span> <span class="string">"!newname!"</span></span><br><span class="line">)   </span><br><span class="line"><span class="built_in">echo</span> 处理完成 </span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-<p>执行前的文件夹</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat4.jpg" alt></p>
-<p>执行上边的代码</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat5.jpg" alt></p>
-<p>执行后的文件夹</p>
-<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/bat6.jpg" alt></p>
-<p>完美！</p>
-<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>大功告成了。只能说批处理的命令坑太多了，非常不习惯，和现代编程语言太多的不同了。唯一的好处就是不用搭环境，写个文本文件直接运行。但对于这些文件处理，推荐学一下 <code>python</code> ，就会体会到优雅了。</p>
+        <p>QQ 小程序最开始是邀请制的，在上个月差不多快中旬的时候对开发者全面开放了，把之前的微信小程序「神奇字体」搬了过去，关于微信小程序详见 <a href="https://mp.weixin.qq.com/s/CQTk6KMV6sWlF3A2hYEF1Q" target="_blank" rel="noopener">小程序神奇字体的从零到一</a>。</p>
+<p>这里分享下 QQ 小程序从零到一的搬移过程。</p>
+<h1 id="认证"><a href="#认证" class="headerlink" title="认证"></a>认证</h1><p>首先是去注册 QQ 小程序，进行认证开发者，然后才能发布小程序，大概认证了快一周左右吧。</p>
+<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>和微信小程序一样，先下了客户端。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qqmini.jpg" alt></p>
+<p>再看下微信小程序的开发界面。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/wxmini.jpg" alt></p>
+<p>有没有发现不同之处。本来下完 QQ 小程序后直接想把代码粘贴过去，然后发现 QQ 小程序的开发工具竟然没有编辑器，也可能是我没找到，但我找了好久，没办法就用其他编辑器新建了代码。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>代码的话，命名上基本上是把微信小程序的 wx 啥啥啥，改成了 q 啥啥啥。举几个例子。</p>
+<p>文件的后缀名。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq2.jpg" alt></p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/wx2.jpg" alt></p>
+<p>库函数的调用。</p>
+<p>QQ 小程序的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">click(e) &#123;</span><br><span class="line">    var message = e.currentTarget.dataset.message;</span><br><span class="line">    qq.setClipboardData(&#123;</span><br><span class="line">        data: message,</span><br><span class="line">        success: function (res) &#123;</span><br><span class="line">            qq.showToast(&#123;</span><br><span class="line">                title: <span class="string">"复制成功"</span>,</span><br><span class="line">                duration: <span class="number">1000</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: function (res) &#123;</span><br><span class="line">            qq.showToast(&#123;</span><br><span class="line">                title: <span class="string">"复制失败"</span>,</span><br><span class="line">                duration: <span class="number">2000</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>微信小程序的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">click(e) &#123;</span><br><span class="line">    var message = e.currentTarget.dataset.message;</span><br><span class="line">    wx.setClipboardData(&#123;</span><br><span class="line">        data: message,</span><br><span class="line">        success: function (res) &#123;</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">                title: <span class="string">"复制成功"</span>,</span><br><span class="line">                duration: <span class="number">2000</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: function (res) &#123;</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">                title: <span class="string">"复制失败"</span>,</span><br><span class="line">                duration: <span class="number">2000</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>另外说个神奇的事情，开始的时候这里其实忘了把 <code>wx</code> 改成 <code>qq</code> 了，然后编译和预览竟然都是成功的。</p>
+<p>此外，相比于微信小程序的代码，QQ 小程序粘贴过来的代码去掉了一句代码，不然会有 <code>bug</code>，但并不知道为什么。而且同样的代码， QQ 小程序给我一种卡卡的感觉，不够流畅。</p>
+<h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1><p>开发的话，如果遇到问题去搜索的话，会发现个无奈的事情。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq22.jpg" alt></p>
+<p>搜到的都是微信小程序解决方案，所以我们只能去他的 <a href="https://q.qq.com/wiki/" target="_blank" rel="noopener">官方文档</a> 去看了 。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq23.jpg" alt></p>
+<p>或者就是搜索的时候利用 <code>site</code> 关键字限定在官方文档。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq24.jpg" alt></p>
+<p>当然 QQ 小程序和微信小程序这么像，其实微信小程序的相关解决方案也可以照搬到 QQ 小程序。</p>
+<h1 id="接入广告"><a href="#接入广告" class="headerlink" title="接入广告"></a>接入广告</h1><p>微信小程序流量主开通的条件是</p>
+<blockquote>
+<p> 累计独立访客（UV）不低于 1000</p>
+</blockquote>
+<p>QQ 小程序流量主开通的条件是</p>
+<blockquote>
+<p>DAU （日活跃用户数量）峰值 &gt; 500</p>
+</blockquote>
+<p>然而神奇的事情又出现了，我还没上线小程序的时候，就可以接入广告，大概是个 BUG。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq3.jpg" alt></p>
+<p>甚至上线前竟然有了收入</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq4.jpg" alt></p>
+<p>但现在进入流量主，会提示我没有权限接入广告，太迷了</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq6.jpg" alt></p>
+<h1 id="审核"><a href="#审核" class="headerlink" title="审核"></a>审核</h1><p>当开发完后，就该提交审核了，关于审核时间的话，微信小程序在工作时间一般几个小时就有结果了，然而 QQ 小程序每次提交完就得等几天了。</p>
+<p>然后和微信小程序一样的界面，一样的代码，在 QQ 小程序这里审核被拒了三次。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq7.png" alt></p>
+<p>第一次的原因说是因为我接入了第三方广告。</p>
+<p>然而我是莫名其妙接上的官方的广告呀，然后我没改代码就又重新提交了。</p>
+<p>第二次的原因说是不具备可用性。</p>
+<p>微信小程序都用的那么久了，一样的代码为什么不具备可用性呢，然后我没改代码就又重新提交了。</p>
+<p>第三次的原因，请看图，我都震惊了，你们难道不是一家的吗？</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq8.png" alt></p>
+<p>我都觉得他是在难为我胖虎了，我猜他的原因是因为小程序里边的轮播图？</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq9.jpg" alt></p>
+<p>没办法呀，接着改呗，于是改了轮播图和文案。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq10.jpg" alt></p>
+<p>并且我真的有些暴躁了，然后提交审核的时候加了一段话。。。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq11.png" alt></p>
+<p>最后，在今天，终于通过了，从最开始到现在历时大约三周吧，和微信小程序形成了鲜明对比，微信 <a href="https://mp.weixin.qq.com/s/CQTk6KMV6sWlF3A2hYEF1Q" target="_blank" rel="noopener">小程序</a> 从开发到上线仅仅用了<code>3</code> 天。</p>
+<h1 id="入口"><a href="#入口" class="headerlink" title="入口"></a>入口</h1><p>仅仅手机端 QQ 可以使用，TIM 和 PC 端都不能打开，同样是下拉消息列表。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq12.jpg" alt></p>
+<p>然后提供了搜索小程序的功能。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq13.jpg" alt></p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq14.jpg" alt></p>
+<p>另外可以通过扫描二维码进入，这里又发现了神奇的事情。</p>
+<p>在设置界面提供了一个二维码。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq15.jpg" alt></p>
+<p>也就是下边的二维码。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq16.png" alt></p>
+<p>然而这个二维码在 QQ 中扫描成功，在微信中却不识别。</p>
+<p>在开发管理中又找到了一个二维码。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq18.jpg" alt></p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq19.png" alt></p>
+<p>上边的二维码就是正常的了，在微信中也可以识别，扫描后自动跳转到 QQ 打开小程序。</p>
+<p>此外增加了分享到 QQ 空间的能力，可以在 QQ 空间直接打开。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq20.jpg" alt></p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq21.jpg" alt></p>
+<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><p>顺便给大家分享下微信小程序目前的数据吧。</p>
+<p>目前累计用户是 3 万。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq26.jpg" alt></p>
+<p>总添加用户 4.3 K.</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq27.png" alt></p>
+<p>有一天访问量暴增，然后最近稳定在了每天 2k+ 。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq28.png" alt></p>
+<p>最后再分享下最近微薄的收入。</p>
+<p><img src="https://windliangblog.oss-cn-beijing.aliyuncs.com/qq25.jpg" alt></p>
+<p>每天平均收入 1 块钱，目前 80 多块钱。</p>
+<p>自已一直也没有专门去推广，都是靠大家的传播，为了表示感谢，在这里就给大家劈个叉吧。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>通过从注册到发布 QQ 小程序，我这里体验的感觉不是很好，尤其是审核时间和规则上，很莫名其妙。另外开发工具没提供编辑器不知道是怎么考虑的，离微信小程序的开发体验还有些距离。不过 QQ 的流量目前主要是 00 后居多，所以对于某些小程序发布在 QQ 可能会有些优势。</p>
 
       
     </div>
@@ -529,9 +557,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/批处理/" rel="tag"># 批处理</a>
+            <a href="/tags/随想/" rel="tag"># 随想</a>
           
-            <a href="/tags/bat/" rel="tag"># bat</a>
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+            <a href="/tags/小程序/" rel="tag"># 小程序</a>
           
         </div>
       
@@ -544,8 +574,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/25/一直迷糊的浮点数/" rel="next" title="一直迷糊的浮点数">
-                <i class="fa fa-chevron-left"></i> 一直迷糊的浮点数
+              <a href="/2019/08/08/windows方便的批处理/" rel="next" title="windows方便的批处理-批量修改文件夹名">
+                <i class="fa fa-chevron-left"></i> windows方便的批处理-批量修改文件夹名
               </a>
             
           </div>
@@ -553,10 +583,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/14/QQ小程序「神奇字体」从注册到发布/" rel="prev" title="QQ小程序「神奇字体」从注册到发布">
-                QQ小程序「神奇字体」从注册到发布 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -820,7 +846,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试一"><span class="nav-number">3.</span> <span class="nav-text">尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题升级"><span class="nav-number">4.</span> <span class="nav-text">问题升级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试二"><span class="nav-number">5.</span> <span class="nav-text">尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最终尝试"><span class="nav-number">6.</span> <span class="nav-text">最终尝试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束"><span class="nav-number">7.</span> <span class="nav-text">结束</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#认证"><span class="nav-number">1.</span> <span class="nav-text">认证</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发工具"><span class="nav-number">2.</span> <span class="nav-text">开发工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发"><span class="nav-number">4.</span> <span class="nav-text">开发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接入广告"><span class="nav-number">5.</span> <span class="nav-text">接入广告</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#审核"><span class="nav-number">6.</span> <span class="nav-text">审核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#入口"><span class="nav-number">7.</span> <span class="nav-text">入口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据"><span class="nav-number">8.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">9.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
