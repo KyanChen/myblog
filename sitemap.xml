@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://windliang.cc/about/index.html</loc>
+    
+    <lastmod>2019-12-24T11:33:13.773Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://windliang.cc/2019/12/11/%E6%88%91%E5%AF%B9%E6%8C%87%E9%92%88%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
     
-    <lastmod>2019-12-12T11:02:18.591Z</lastmod>
+    <lastmod>2019-12-14T08:34:56.989Z</lastmod>
     
   </url>
   
@@ -215,13 +222,6 @@
     <loc>http://windliang.cc/tags/index.html</loc>
     
     <lastmod>2018-07-13T02:14:06.242Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://windliang.cc/about/index.html</loc>
-    
-    <lastmod>2018-07-09T14:55:44.335Z</lastmod>
     
   </url>
   
