@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://windliang.oss-cn-beijing.aliyuncs.com/5_10.jpg">
 <meta property="og:image" content="http://windliang.oss-cn-beijing.aliyuncs.com/5_12.jpg">
 <meta property="og:image" content="http://windliang.oss-cn-beijing.aliyuncs.com/5_12.jpg">
-<meta property="og:updated_time" content="2019-06-24T11:15:28.803Z">
+<meta property="og:updated_time" content="2020-02-05T03:21:04.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一文让你彻底明白马拉车算法">
 <meta name="twitter:description" content="缘起对应于 leetcode 的第 5 题，给定一个字符串，然后输出这个字符串包含的最长回文子串。例如，”cbabfd” 的最长回文子串就是 “bab”。大概是去年刷到的这个题，当时有一种马拉车的算法来解决这个问题。记得当时理解了好几天才明白，当时也总结了一下。这几天看到知乎又有人问这个算法，索性就把这个算法单独拿出来总结一下，在之前的总结上再讲的详细一点。 中心扩展算法我们先来看一个简单的算法，">
@@ -355,12 +355,24 @@
                 
               
 
-              <time title="创建时间：2019-06-24 15:04:16 / 修改时间：19:15:28" itemprop="dateCreated datePublished" datetime="2019-06-24T15:04:16+08:00">2019-06-24</time>
+              <time title="创建时间：2019-06-24 15:04:16" itemprop="dateCreated datePublished" datetime="2019-06-24T15:04:16+08:00">2019-06-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-05 11:21:04" itemprop="dateModified" datetime="2020-02-05T11:21:04+08:00">2020-02-05</time>
               
             
           </span>
@@ -464,6 +476,7 @@
 <p>时间复杂度：for 循环里边套了一层 while 循环，难道不是 O ( n² )？不！其实是 O ( n )。不严谨的想一下，因为 while 循环访问 R 右边的数字用来扩展，也就是那些还未求出的节点，然后不断扩展，而期间访问的节点下次就不会再进入 while 了，可以利用对称得到自己的解，所以每个节点访问都是常数次，所以是 O ( n )。</p>
 <p>空间复杂度：O（n）。</p>
 <h1 id="总"><a href="#总" class="headerlink" title="总"></a>总</h1><p>最后感叹一下，提出马拉车算法的人太天才了，这个算法太美妙了，哈哈。</p>
+<p>另外，更多详细通俗的 leetcode 题解，见 <a href="https://leetcode.wang/" target="_blank" rel="noopener">https://leetcode.wang/</a> 。</p>
 
       
     </div>
