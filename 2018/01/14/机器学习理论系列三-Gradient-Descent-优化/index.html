@@ -112,35 +112,35 @@
 <meta name="keywords" content="机器学习,梯度下降,梯度下降优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习理论系列三 : Gradient Descent 优化">
-<meta property="og:url" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/index.html">
+<meta property="og:url" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/index.html">
 <meta property="og:site_name" content="windliang">
 <meta property="og:description" content="tuning  美 [‘tjunɪŋ] : 调整learning rate 美[ˈlɚnɪŋ ret] : 学习速率stochastic 美 [stə’kæstɪk]：随机的batch 美 [bætʃ] : 一批dimension 美 [dɪˈmɛnʃən, daɪ-] : 维度mean 美 [min] : 平均数standard deviation美 [ˈstændəd ˌdiviˈeʃən]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/1.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/2.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/3.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/6.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/4.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/5.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/7.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/8.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/9.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/10.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/12.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/13.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/14.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/1.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/2.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/3.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/6.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/4.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/5.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/7.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/8.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/9.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/10.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/12.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/13.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/14.jpg">
 <meta property="og:updated_time" content="2018-07-09T14:33:18.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习理论系列三 : Gradient Descent 优化">
 <meta name="twitter:description" content="tuning  美 [‘tjunɪŋ] : 调整learning rate 美[ˈlɚnɪŋ ret] : 学习速率stochastic 美 [stə’kæstɪk]：随机的batch 美 [bætʃ] : 一批dimension 美 [dɪˈmɛnʃən, daɪ-] : 维度mean 美 [min] : 平均数standard deviation美 [ˈstændəd ˌdiviˈeʃən]">
-<meta name="twitter:image" content="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/1.jpg">
+<meta name="twitter:image" content="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/1.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/"/>
+  <link rel="canonical" href="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/"/>
 
 
 
@@ -157,6 +157,16 @@
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a34979c74580352a7178e5be5275fba6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -335,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/">
+    <link itemprop="mainEntityOfPage" href="https://windliang.wang/2018/01/14/机器学习理论系列三-Gradient-Descent-优化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="windliang">
@@ -890,24 +900,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 

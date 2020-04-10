@@ -112,34 +112,34 @@
 <meta name="keywords" content="线性回归,机器学习,梯度下降">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习理论系列一：Linear Regression(线性回归)">
-<meta property="og:url" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/index.html">
+<meta property="og:url" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/index.html">
 <meta property="og:site_name" content="windliang">
 <meta property="og:description" content="Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归 Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降Model 美 [ˈmɑdl] : 模型  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 P">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/baby.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/data.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/2.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/3.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/6.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/4.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/5.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/more.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/l.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/baby.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/data.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/2.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/3.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/6.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/4.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/5.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/1.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/more.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/l.jpg">
 <meta property="og:updated_time" content="2018-07-09T14:12:17.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习理论系列一：Linear Regression(线性回归)">
 <meta name="twitter:description" content="Linear  Regression 美 [ˈlɪniər] [rɪˈɡrɛʃən] : 线性回归 Loss funcition 美 [lɔs] [ˈfʌŋkʃən] : 损失函数Gradient Descent 美[ˈɡrediənt] [dɪˈsɛnt] : 梯度下降Model 美 [ˈmɑdl] : 模型  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 P">
-<meta name="twitter:image" content="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png">
+<meta name="twitter:image" content="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/w.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/"/>
+  <link rel="canonical" href="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/"/>
 
 
 
@@ -156,6 +156,16 @@
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a34979c74580352a7178e5be5275fba6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -334,7 +344,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/">
+    <link itemprop="mainEntityOfPage" href="https://windliang.wang/2018/01/01/机器学习理论系列一：Linear-Regression-线性回归/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="windliang">
@@ -887,24 +897,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 

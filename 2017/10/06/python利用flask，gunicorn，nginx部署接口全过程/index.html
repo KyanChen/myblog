@@ -112,33 +112,33 @@
 <meta name="keywords" content="python,flask,后端,gunicorn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python利用flask，gunicorn部署接口全过程">
-<meta property="og:url" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/index.html">
+<meta property="og:url" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/index.html">
 <meta property="og:site_name" content="windliang">
 <meta property="og:description" content="背景无论开发 Android 还是 Web 端程序，有时候不免需要一些接口供自己调用进行测试，这里记录一下详细的过程。 环境配置 阿里云的 9.9 的学生特惠机, Ubuntu 14.04 64位 利用 putty 输入公网 ip 登录到服务器 先配置编码为 utf-8 输入账号密码   要利用 apt-get 包管理工具下载各种包，所以先更新下源,随手把  git 也安一下,安装中途输入 Y 即">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/ali.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/utf8.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/putty.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/root.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/apt.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/s.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/5000.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/postman.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/post.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/postman2.png">
-<meta property="og:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/post2.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/ali.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/utf8.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/putty.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/root.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/apt.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/s.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/5000.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/postman.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/post.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/postman2.png">
+<meta property="og:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/post2.png">
 <meta property="og:updated_time" content="2017-10-06T03:33:36.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python利用flask，gunicorn部署接口全过程">
 <meta name="twitter:description" content="背景无论开发 Android 还是 Web 端程序，有时候不免需要一些接口供自己调用进行测试，这里记录一下详细的过程。 环境配置 阿里云的 9.9 的学生特惠机, Ubuntu 14.04 64位 利用 putty 输入公网 ip 登录到服务器 先配置编码为 utf-8 输入账号密码   要利用 apt-get 包管理工具下载各种包，所以先更新下源,随手把  git 也安一下,安装中途输入 Y 即">
-<meta name="twitter:image" content="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/ali.png">
+<meta name="twitter:image" content="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/ali.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/"/>
+  <link rel="canonical" href="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/"/>
 
 
 
@@ -155,6 +155,16 @@
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a34979c74580352a7178e5be5275fba6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -333,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/">
+    <link itemprop="mainEntityOfPage" href="https://windliang.wang/2017/10/06/python利用flask，gunicorn，nginx部署接口全过程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="windliang">
@@ -894,24 +904,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 

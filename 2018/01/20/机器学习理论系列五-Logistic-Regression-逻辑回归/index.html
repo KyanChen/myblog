@@ -112,52 +112,52 @@
 <meta name="keywords" content="机器学习,分类,逻辑回归">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习理论系列五 : Logistic Regression (逻辑回归)">
-<meta property="og:url" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/index.html">
+<meta property="og:url" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/index.html">
 <meta property="og:site_name" content="windliang">
 <meta property="og:description" content="Sigmoid 美 [‘sɪgmɔɪd] : S 形的Discriminative 美 [dɪ’skrɪməˌneɪtɪv] : 判别  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 PPT 原教程：https://pan.baidu.com/s/1brbb6rX 密码：ty1r 接着上篇的生成模型，我们进行下公式的变形，见证奇迹的发生！  问题的关键是求出 P">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/1.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/2.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/3.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/5.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/4.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/6.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/7.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/8.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/9.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/10.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/11.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/12.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/13.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/14.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/15.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/16.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/17.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/18.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/19.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/16.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/20.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/21.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/22.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/23.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/11.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/24.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/25.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/26.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/28.jpg">
-<meta property="og:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/27.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/1.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/2.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/3.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/5.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/4.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/6.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/7.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/8.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/9.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/10.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/11.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/12.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/13.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/14.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/15.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/16.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/17.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/18.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/19.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/16.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/20.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/21.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/22.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/23.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/11.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/24.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/25.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/26.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/28.jpg">
+<meta property="og:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/27.jpg">
 <meta property="og:updated_time" content="2018-07-09T14:32:58.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习理论系列五 : Logistic Regression (逻辑回归)">
 <meta name="twitter:description" content="Sigmoid 美 [‘sɪgmɔɪd] : S 形的Discriminative 美 [dɪ’skrɪməˌneɪtɪv] : 判别  本文是对李宏毅教授课程的笔记加上自己的理解重新组织，如有错误，感谢指出。视频及 PPT 原教程：https://pan.baidu.com/s/1brbb6rX 密码：ty1r 接着上篇的生成模型，我们进行下公式的变形，见证奇迹的发生！  问题的关键是求出 P">
-<meta name="twitter:image" content="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/1.jpg">
+<meta name="twitter:image" content="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/1.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/"/>
+  <link rel="canonical" href="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/"/>
 
 
 
@@ -174,6 +174,16 @@
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a34979c74580352a7178e5be5275fba6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -352,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://windliang.cc/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/">
+    <link itemprop="mainEntityOfPage" href="https://windliang.wang/2018/01/20/机器学习理论系列五-Logistic-Regression-逻辑回归/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="windliang">
@@ -940,24 +950,6 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 
